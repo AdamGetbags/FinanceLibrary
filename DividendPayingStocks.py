@@ -20,7 +20,7 @@ tickers = pd.read_excel('validTickers.xlsx')
 divYieldList = []
 
 #Define function
-def getDividendStocks:
+def getDividendStocks():
     #For all stocks in list
     for i in tickers["Symbol"][:]:
         try:
