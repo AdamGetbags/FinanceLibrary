@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Get Options Data With yahoo_fin
+Options Volume By Expiration With yahoo_fin
 @author: Adam Getbags
 """
 
