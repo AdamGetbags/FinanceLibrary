@@ -65,11 +65,11 @@ def getVerticalSpreadPrice(ticker, spreadType, expNo, longStrike, shortStrike):
         if spreadType == 'call' and longStrike < shortStrike:
             print('Long Call Spread Price is $' + str(round(spreadPrice, 4)))
         elif spreadType == 'call' and longStrike > shortStrike:
-            print('Short Call Spread Price is $' + str(abs(round(spreadPrice, 4))))
+            print('Short Call Spread Price is -$' + str(abs(round(spreadPrice, 4))))
         elif spreadType == 'put' and longStrike > shortStrike:
             print('Long Put Spread Price is $' + str(round(spreadPrice, 4)))
         elif spreadType == 'put' and longStrike < shortStrike:
-            print('Short Put Spread Price is $' + str(abs(round(spreadPrice, 4))))
+            print('Short Put Spread Price is -$' + str(abs(round(spreadPrice, 4))))
         elif longStrike == shortStrike:
             print('Strike prices are the same, no vertical spreads here.')
             return
