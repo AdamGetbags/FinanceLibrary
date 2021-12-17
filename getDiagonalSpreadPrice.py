@@ -35,7 +35,7 @@ def getDiagonalSpreadPrice(ticker, spreadType, longExpNo, shortExpNo,
             shortChainData = op.get_puts(ticker, date = expirationDates[shortExpNo])
         else: 
             print('Please enter call or put for spreadType.')
-            # return
+            return
         
         #trim data 
         longChainData = longChainData[['Strike', 'Bid', 'Ask', 'Last Price']][
@@ -98,7 +98,7 @@ def getDiagonalSpreadPrice(ticker, spreadType, longExpNo, shortExpNo,
             return
 
         #output
-        return  round(spreadPrice, 4)
+        return round(spreadPrice, 4)
     
     except IndexError:
         print('Strike data not available, try again.')
