@@ -33,7 +33,7 @@ def getCalendarSpreadPrice(ticker, spreadType, longExpNo, shortExpNo, strike):
             shortChainData = op.get_puts(ticker, date = expirationDates[shortExpNo])
         else: 
             print('Please enter call or put for spreadType.')
-            # return
+            return
         
         #trim data 
         longChainData = longChainData[['Strike', 'Bid', 'Ask', 'Last Price']][
