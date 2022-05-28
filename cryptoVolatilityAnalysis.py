@@ -7,16 +7,16 @@ Crypto Historical Volatility Analysis
 """
 
 #Import modules
-import yahoo_fin.stock_info as si
+#import yahoo_fin.stock_info as si
 import numpy as np
-from investingCredentials import username, pw
-from selenium import webdriver
+#from investingCredentials import username, pw
+#from selenium import webdriver
 from time import sleep
-from selenium.webdriver.common.by import By
+#from selenium.webdriver.common.by import By
 import pandas as pd
 
 # from btcFilePath import btcFilePath
-btcFilePath = "C:/Users/AmatVictoriaCuramIII/Downloads/BTCUSD.csv"
+btcFilePath = "BTC TIMESERIES PATH GOES HERE"
 
 # #url to scrape
 # url = "https://www.investing.com/crypto/bitcoin/historical-data"
