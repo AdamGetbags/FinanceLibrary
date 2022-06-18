@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Real Time Equity Option Streaming
+Real Time Equity Option Streaming Data
 @author: Adam Getbags
 @author: https://github.com/alexgolec/tda-api
 shout out to Part Time Larry!!!
