@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-
 @author: Adam Getbags
 CoinGecko API: Advanced Guide
-
 """
 
 #pip install pycoingecko
@@ -53,7 +51,30 @@ assetPlatforms = pd.DataFrame.from_dict(assetPlatformsList
 
 #assetPlatforms[assetPlatforms['id'] == 'binance-smart-chain']
 #get AVAX token price (using contract address) from BSC (asset platform)
-cg.get_token_price(id = 'binance-smart-chain', 
+AVAXpriceBSC = cg.get_token_price(id = 'binance-smart-chain', 
                    contract_addresses = '0x1ce0c2827e2ef14d5c4f' +
                                         '29a091d735a204794041',
                    vs_currencies = 'usd')
+
+#get coins categories, privacy-coins, stablecoins, gambling, lp-tokens, etc.
+coinCategories = pd.DataFrame(cg.get_coins_categories_list())
+
+
+#get coins market cap, rank, prices, volume, market data, etc.
+coinsMktDict = cg.get_coins_markets(vs_currency = 'usd',
+                                    #ids = coins,
+                                    category = 'stablecoins')
+
+coinsMktDict = cg.get_coins_markets(vs_currency = 'usd',
+                                    #ids = coins,
+                                    category = 'stablecoins')
+
+coinsMktDataFrame = pd.DataFrame.from_dict(coinsMktDict).sort_values('id'
+                                      ).reset_index(drop=True)
+
+#
+
+#get coin data by ID
+coinDataByIdDict = cg.get_coin_by_id(id='bitcoin')
+#coinDataByIdDataFrame = pd.DataFrame.from_dict(coinsMktDict).sort_values('id'
+#                                       ).reset_index(drop=True)
