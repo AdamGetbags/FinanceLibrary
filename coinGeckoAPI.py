@@ -137,7 +137,7 @@ exchgVolumeDataFrame = exchgVolumeDataFrame.set_index('Date')
 #plot
 exchgVolumeDataFrame['Volume'].plot()
 
-#get coin ticker by id / limited to 10, by page
+#get coin ticker by id / limited to 100, by page
 mktSpecificData = cg.get_coin_ticker_by_id(id = 'bitcoin',
                                            exchange_id ='aave',
                                            page = 2,
